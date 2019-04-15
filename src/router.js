@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import DropdownExample from './views/DropdownExample.vue'
 import ModalExample from './views/ModalExample.vue'
+import TabExample from './views/TabExample.vue'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/modal',
       name: 'modal',
       component: ModalExample,
+    },
+    {
+      path: '/tab',
+      name: 'tab',
+      component: TabExample,
     },
   ]
 })

@@ -6,6 +6,8 @@
         <router-link class="font-semibold text-gray-700 hover:underline" to="/dropdown">Dropdown</router-link>
         <span class="mx-4 text-gray-500">|</span>
         <router-link class="font-semibold text-gray-700 hover:underline" to="/modal">Modal</router-link>
+        <span class="mx-4 text-gray-500">|</span>
+        <router-link class="font-semibold text-gray-700 hover:underline" to="/tab">Tab</router-link>
       </div>
       <div class="mt-2">
         <a href="https://github.com/adamwathan/vue-tailwind-examples" class="text-sm font-semibold text-gray-600 hover:underline">
