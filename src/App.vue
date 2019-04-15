@@ -2,9 +2,16 @@
   <div id="app" class="antialiased text-gray-900 flex flex-col min-h-screen bg-gray-200">
     <router-view class="flex-1"/>
     <div class="flex-shrink-0 py-12 text-center">
-      <router-link class="font-semibold text-gray-700 hover:underline" to="/dropdown">Dropdown</router-link>
-      <span class="mx-4 text-gray-500">|</span>
-      <router-link class="font-semibold text-gray-700 hover:underline" to="/modal">Modal</router-link>
+      <div>
+        <router-link class="font-semibold text-gray-700 hover:underline" to="/dropdown">Dropdown</router-link>
+        <span class="mx-4 text-gray-500">|</span>
+        <router-link class="font-semibold text-gray-700 hover:underline" to="/modal">Modal</router-link>
+      </div>
+      <div class="mt-2">
+        <a href="https://github.com/adamwathan/vue-tailwind-examples" class="text-sm font-semibold text-gray-600 hover:underline">
+          Source on GitHub
+        </a>
+      </div>
     </div>
     <portal-target name="modals"></portal-target>
   </div>
