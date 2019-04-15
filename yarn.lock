@@ -4962,6 +4962,11 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
 
+portal-vue@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/portal-vue/-/portal-vue-2.1.0.tgz#1f5fb6d15111ee37575fc7a581306fda222b2361"
+  integrity sha512-Bl/26vOn7+z0qlJr7rSM/vd9zUL9hvXYLereFF9RAT7gpmTGpDSYUE/2zZKyB6kQeumVJ0rDgEa+k1+mGOpM0g==
+
 portfinder@^1.0.20:
   version "1.0.20"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.20.tgz#bea68632e54b2e13ab7b0c4775e9b41bf270e44a"

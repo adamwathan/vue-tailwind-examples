@@ -3,9 +3,10 @@
     <router-view class="flex-1"/>
     <div class="flex-shrink-0 py-12 text-center">
       <router-link class="font-semibold text-gray-700 hover:underline" to="/dropdown">Dropdown</router-link>
-      <!-- <span class="mx-4 text-gray-500">|</span> -->
-      <!-- <router-link class="font-semibold text-gray-700 hover:underline" to="/about">About</router-link> -->
+      <span class="mx-4 text-gray-500">|</span>
+      <router-link class="font-semibold text-gray-700 hover:underline" to="/modal">Modal</router-link>
     </div>
+    <portal-target name="modals"></portal-target>
   </div>
 </template>
 
@@ -25,6 +26,12 @@
 }
 .transition-faster {
   transition-duration: 100ms;
+}
+.transition-fast {
+  transition-duration: 150ms;
+}
+.transition-medium {
+  transition-duration: 200ms;
 }
 .ease-out-quad {
   transition-timing-function: cubic-bezier(.25, .46, .45, .94);
