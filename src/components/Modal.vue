@@ -1,6 +1,6 @@
 <template>
   <portal to="modals">
-    <div v-if="showModal" @click="close" class="fixed inset-0 flex items-center justify-center">
+    <div v-if="showModal" class="fixed inset-0 flex items-center justify-center">
       <transition
         @before-leave="backdropLeaving = true"
         @after-leave="backdropLeaving = false"
@@ -13,7 +13,7 @@
         appear
       >
         <div v-if="showBackdrop">
-          <div class="absolute inset-0 bg-black opacity-25"></div>
+          <div class="absolute inset-0 bg-black opacity-25" @click="close"></div>
         </div>
       </transition>
 
