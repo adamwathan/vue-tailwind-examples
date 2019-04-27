@@ -9,3 +9,10 @@ A small collection of interactive Vue + Tailwind examples, written from scratch.
 yarn install
 yarn run serve
 ```
+
+Or
+
+```
+npm install
+npm run serve
+```
