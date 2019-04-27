@@ -13,7 +13,7 @@
         appear
       >
         <div v-if="showBackdrop">
-          <div class="absolute inset-0 bg-black opacity-25"></div>
+          <div class="modal-backdrop absolute inset-0 bg-black opacity-25"></div>
         </div>
       </transition>
 
@@ -90,9 +90,11 @@ export default {
       this.showBackdrop = true
       this.showContent = true
     },
-    close() {
-      this.showBackdrop = false
-      this.showContent = false
+    close(e) {
+      if (e && e.target.classList.contains('modal-backdrop') || e === undefined) {
+        this.showBackdrop = false
+        this.showContent = false
+      }
     }
   }
 }
