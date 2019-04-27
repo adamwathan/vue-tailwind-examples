@@ -1,6 +1,6 @@
 <template>
   <portal to="modals">
-    <div v-if="showModal" @click="close" class="fixed inset-0 flex items-center justify-center">
+    <div v-if="showModal" class="fixed inset-0 flex items-center justify-center">
       <transition
         @before-leave="backdropLeaving = true"
         @after-leave="backdropLeaving = false"
@@ -13,7 +13,7 @@
         appear
       >
         <div v-if="showBackdrop">
-          <div class="modal-backdrop absolute inset-0 bg-black opacity-25"></div>
+          <div class="absolute inset-0 bg-black opacity-25" @click="close"></div>
         </div>
       </transition>
 
@@ -90,11 +90,9 @@ export default {
       this.showBackdrop = true
       this.showContent = true
     },
-    close(e) {
-      if (e && e.target.classList.contains('modal-backdrop') || e === undefined) {
-        this.showBackdrop = false
-        this.showContent = false
-      }
+    close() {
+      this.showBackdrop = false
+      this.showContent = false
     }
   }
 }
