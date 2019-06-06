@@ -1,6 +1,6 @@
 <template>
   <portal to="modals">
-    <div v-if="showModal" class="fixed inset-0 overflow-y-auto">
+    <div v-if="showModal" class="fixed inset-0">
       <transition
         @before-leave="backdropLeaving = true"
         @after-leave="backdropLeaving = false"
@@ -13,7 +13,7 @@
         appear
       >
         <div v-if="showBackdrop">
-          <div class="fixed inset-0 bg-black opacity-25" @click="close"></div>
+          <div class="fixed inset-0 bg-black opacity-25"></div>
         </div>
       </transition>
 
@@ -28,9 +28,9 @@
         leave-to-class="opacity-0 scale-70"
         appear
       >
-        <div v-if="showContent" class="relative text-center">
+        <div v-if="showContent" class="relative h-full overflow-y-auto text-center" @click="close">
           <div class="inline-block align-middle w-0 h-screen"></div>
-          <div class="inline-block align-middle text-left my-6">
+          <div class="inline-block align-middle text-left my-6" @click.stop>
             <slot></slot>
           </div>
         </div>
@@ -92,10 +92,12 @@ export default {
       this.showModal = true
       this.showBackdrop = true
       this.showContent = true
+      document.body.style.setProperty('overflow', 'hidden')
     },
     close() {
       this.showBackdrop = false
       this.showContent = false
+      document.body.style.removeProperty('overflow')
     }
   }
 }
